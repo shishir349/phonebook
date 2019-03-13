@@ -6,6 +6,23 @@
 	<title>Phone Book</title>
 	<link rel="stylesheet" href="phonebook.css">
 	<script src="phonebook.js"></script>
+	<script>
+		function validate()
+{
+
+	var x=document.getElementById("fullname").value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+
+	
+if(document.getElementById("phone").value.length!=10)
+{
+alert("Number should be of atleast 10 digits")
+}
+}
+	</script>
 </head>
 <body>
 	<div class="container">
@@ -19,7 +36,7 @@
 			<label for="phone">Phone</label><input type="text" id="phone" class="formFields form-control">
 		
 			<br><br>
-			<button id="Add" class="btn-primary">Add Now</button>
+			<button id="Add" class="btn-primary" onClick="validate()">Add Now</button>
 			<button id="Cancel" class="btn-danger">Cancel</button>
 		</div>
 		<div class="phnbook">
